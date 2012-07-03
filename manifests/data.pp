@@ -1,7 +1,7 @@
 #
 # == Class: ntp::data
 #
-# The ntp::data class holds the defaults for all 
+# The ntp::data class holds the defaults for all
 # variables and parameters used in the ntp class.
 #
 # === Parameters

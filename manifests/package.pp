@@ -27,7 +27,7 @@
 #
 # Copyright 2012 Super-Visions, unless otherwise noted.
 #
-class ntp::package( $package_name => hiera('ntp_package') )
+class ntp::package( $package_name = hiera('ntp_package') )
 {
   package { $package_name:
     ensure => installed,
