@@ -4,7 +4,7 @@ source 'https://github.com/Super-Visions/puppet-ntp'
 author 'Super-Visions'
 license 'GNU LESSER GENERAL PUBLIC LICENSE, Version 3'
 summary 'ntp.conf management'
-description 'UNKNOWN'
+description 'ntp installation and configuration module'
 project_page 'https://github.com/Super-Visions/puppet-ntp'
 
 ## Add dependencies, if any:
