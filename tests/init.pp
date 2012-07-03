@@ -8,4 +8,15 @@
 #
 # Learn more about module testing here: http://docs.puppetlabs.com/guides/tests_smoke.html
 #
-include ntp
+
+node default {
+
+  notify { 'ntp-before': }
+  notify { 'ntp-after': }
+
+  class { 'ntp':
+    require => Notify['ntp-before'],
+    before  => Notify['ntp-after'],
+  }
+
+}

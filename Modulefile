@@ -1,9 +1,9 @@
 name    'puppet-ntp'
 version '0.0.1'
-source 'UNKNOWN'
-author 'Stefan Goethals <stefan.goethals@super-visions.com>'
+source 'https://github.com/Super-Visions/puppet-ntp'
+author 'Super-Visions'
 license 'GNU LESSER GENERAL PUBLIC LICENSE, Version 3'
-summary 'UNKNOWN'
+summary 'ntp.conf management'
 description 'UNKNOWN'
 project_page 'https://github.com/Super-Visions/puppet-ntp'
 

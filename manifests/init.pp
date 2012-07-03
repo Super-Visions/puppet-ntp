@@ -1,45 +1,34 @@
+#
 # == Class: ntp
 #
-# Full description of class ntp here.
+# The ntp class manges the ntp.conf file based on data stored in hiera
 #
 # === Parameters
 #
-# Document parameters here.
-#
-# [*sample_parameter*]
-#   Explanation of what this parameter affects and what it defaults to.
-#   e.g. "Specify one or more upstream ntp servers as an array."
+# This class does not take parameters as all parameters are fetched via hiera
+# The parameter defaults are stored in the ntp::data class
 #
 # === Variables
 #
-# Here you should define a list of variables that this module would require.
-#
-# [*sample_variable*]
-#   Explanation of how this variable affects the funtion of this class and if it
-#   has a default. e.g. "The parameter enc_ntp_servers must be set by the
-#   External Node Classifier as a comma separated list of hostnames." (Note,
-#   global variables should not be used in preference to class parameters  as of
-#   Puppet 2.6.)
+# No variables are used in the ntp base class
 #
 # === Examples
 #
-#  class { ntp:
-#    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ]
-#  }
+#  class { ntp: }
 #
 # === Authors
 #
-# Author Name <author@domain.com>
+# Stefan Goethals <stefan.goethals@super-visions.com>
 #
 # === Copyright
 #
-# Copyright 2011 Your name here, unless otherwise noted.
+# Copyright 2012 Super-Visions, unless otherwise noted.
 #
 class ntp
 {
-    anchor { 'ntp::start': }->
-    class { 'ntp::package': }->
-    class { 'ntp::config': }~>
-    class { 'ntp::service': }->
-    anchor { 'ntp::end': }
+  anchor { 'ntp::start': }->
+  class { 'ntp::package': }->
+  class { 'ntp::config': }~>
+  class { 'ntp::service': }->
+  anchor { 'ntp::end': }
 }
